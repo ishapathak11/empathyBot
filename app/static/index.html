@@ -1,0 +1,52 @@
+<!-- app/static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpathyBot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>EmpathyBot</h1>
+            <div class="header-controls">
+                <button id="exit-btn" class="exit-btn">End Chat</button>
+            </div>
+        </div>
+        
+        <div class="messages-area" id="messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        
+        <div id="options-area" class="options-area">
+            <!-- Option buttons will be added here dynamically -->
+        </div>
+        
+        <div id="emoji-area" class="emoji-area">
+            <button class="emoji-btn" data-emoji="happy">😊</button>
+            <button class="emoji-btn" data-emoji="thumbs-up">👍</button>
+            <button class="emoji-btn" data-emoji="heart">❤️</button>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-btn">▶</button>
+        </div>
+    </div>
+    
+    <div id="end-chat-modal" class="modal">
+        <div class="modal-content">
+            <h2>End Chat Session</h2>
+            <p>Are you sure you want to end this chat session?</p>
+            <div class="modal-buttons">
+                <button id="confirm-end-btn">Yes, End Chat</button>
+                <button id="cancel-end-btn">Continue Chatting</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
