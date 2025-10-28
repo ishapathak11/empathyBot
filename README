@@ -1,0 +1,21 @@
+EmpathyAI Chatbot
+A sentiment-aware chatbot that recognizes emotions and adapts responses to provide support and encouragement.
+
+Setup
+Install dependencies:
+pip install -r requirements.txt
+Add the emotion_aware folder and the emotion classifier folder into the model folder of the app
+
+Run the application:
+python main.py
+
+
+Features
+
+Detects user emotions in real-time
+Provides empathetic support and encouragement
+Simple and intuitive user interface
+Feedback by clicking the love emoji or the frown
+
+Usage
+Start a conversation with EmotiveChat and it will automatically detect your emotions and respond appropriately. 
