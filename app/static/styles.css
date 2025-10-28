@@ -1,0 +1,281 @@
+/* app/static/styles.css */
+
+:root {
+    --primary-color: #4a86e8;
+    --secondary-color: #b6d7a8;
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --light-bg: #d9e6fc;
+    --yellow: #ffd966;
+    --border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+.chat-container {
+    max-width: 480px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.messages-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: var(--secondary-color);
+}
+
+/* Emotion-specific styling */
+
+.emotion-badge {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: bold;
+    color: white;
+}
+
+/* Original emotion colors */
+.emotion-joy {
+    background-color: #7ed321;
+}
+
+.emotion-sadness {
+    background-color: #4a90e2;
+}
+
+.emotion-fear {
+    background-color: #9013fe;
+}
+
+.emotion-anger {
+    background-color: #d0021b;
+}
+
+.emotion-neutral {
+    background-color: #9b9b9b;
+}
+
+/* New emotion colors */
+.emotion-love {
+    background-color: #ff6b81;  /* Pink/red shade for love */
+}
+
+.emotion-gratitude {
+    background-color: #20bf6b;  /* Emerald green for gratitude */
+}
+
+.emotion-curiosity {
+    background-color: #3498db;  /* Bright blue for curiosity */
+}
+
+.emotion-disappointment {
+    background-color: #95a5a6;  /* Grayish blue for disappointment */
+}
+
+.emotion-surprise {
+    background-color: #9b59b6;  /* Purple for surprise */
+}
+
+.emotion-pride {
+    background-color: #f39c12;  /* Golden orange for pride */
+}
+
+.message-content {
+    margin-top: 5px;
+}
+
+.bot-message {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+.options-area {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.option-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.emoji-area {
+    display: none;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.emoji-btn {
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    flex: 1;
+    border: none;
+    background-color: #e9e9e9;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#send-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+.exit-btn {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.exit-btn:hover {
+    background-color: #e04141;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    max-width: 400px;
+    width: 80%;
+    text-align: center;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#confirm-end-btn {
+    background-color: #ff4c4c;
+    color: white;
+}
+
+#cancel-end-btn {
+    background-color: #e9e9e9;
+    color: var(--text-color);
+}
+
+.chat-ended {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+    margin: 20px auto;
+    background-color: #f1f1f1;
+    border-radius: var(--border-radius);
+}
